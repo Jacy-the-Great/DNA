@@ -31,7 +31,7 @@ Text default only; in-person is normal.
 
 **Current Role:** Principal Urban Planner and Co-founder, Land iQ, a NSW Government SaaS planning and property analytics platform serving NSW Government, councils, LALCs, and the broader planning sector.
 
-**Future Direction:** Launching internationally recognised, AI-powered planning analytics products. Becoming one of Australia's leading voices in AI and PlanTech. Building national and international influence in urban analytics and AI education for the built environment.
+**Future Direction:** Long-term vision is to build a portfolio of AI-first companies, businesses reimagined and revolutionised using AI and advanced technology as core infrastructure, not bolted on. This extends beyond planning and PlanTech into any business service worth reinventing. The approach is prototype-and-release: build, launch, and test business ideas to see what gains traction, rather than committing early to a single venture. PlanTech and planning analytics is the first venture under this model, not the only one.
 
 ---
 

@@ -100,3 +100,9 @@ node scripts/new-sub.js landiq training-modules
 - After any edit, recompile the affected file and run the audit.
 - Quarterly review: update the Thrive priorities in master.md and the performance data in landiq.md.
 - Next scheduled review: 11 September 2026.
+
+---
+
+## Known audit gaps (v2 improvements)
+
+The audit does not currently detect duplicate facts across layers. The core design principle is that any fact appearing in more than one place should live only in the lowest layer that covers all its uses. Violations of this are currently a manual responsibility. A v2 audit check would diff content across layers and flag sentences or bullet points that appear in more than one file outside of the compiled outputs.

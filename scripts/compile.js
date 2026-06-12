@@ -48,21 +48,30 @@ function compile(relPath) {
   return outPath;
 }
 
-// Compile all source files if called with no args, or a specific file
+// Discover all compilable source files (primaries + subs, not master itself)
+function discoverTargets() {
+  const targets = [];
+  function walk(dir) {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith('.md') && !entry.name.startsWith('.')) {
+        targets.push(path.relative(ROOT, full).replace(/\\/g, '/'));
+      }
+    }
+  }
+  walk(path.join(ROOT, 'primaries'));
+  walk(path.join(ROOT, 'subs'));
+  return targets;
+}
+
+// Compile all discovered files if called with no args, or a specific file
 const targets = process.argv.slice(2);
+if (!fs.existsSync(OUTPUTS)) fs.mkdirSync(OUTPUTS);
 
 if (targets.length === 0) {
-  const allTargets = [
-    'primaries/professional.md',
-    'primaries/personal.md',
-    'primaries/landiq.md',
-    'subs/professional/brand-manager.md',
-    'subs/personal/martini.md',
-    'subs/personal/real-estate.md',
-  ];
-  if (!fs.existsSync(OUTPUTS)) fs.mkdirSync(OUTPUTS);
-  for (const t of allTargets) compile(t);
+  for (const t of discoverTargets()) compile(t);
 } else {
-  if (!fs.existsSync(OUTPUTS)) fs.mkdirSync(OUTPUTS);
   for (const t of targets) compile(t);
 }

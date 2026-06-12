@@ -57,6 +57,9 @@ When composing or reviewing a message on Jacy's behalf, check tone against his n
 
 Always preserve his phrasing. Label the output: "Tone Mirror Adjustment"
 
+*Last updated: 12 June 2026*
+
+
 # Land iQ Context DNA
 
 Reference file for Claude. Covers Land iQ as a product and business only. Jacy's personal brand, independent business ambitions, and career development goals live in master.md and professional.md.
@@ -261,7 +264,9 @@ Update quarterly:
 - Website traffic (once live)
 - LinkedIn engagement (once official channel launches)
 
-*Last updated: April 2026*
+*Performance data as at: April 2026. Update at each quarterly review.*
+
+*Last updated: 12 June 2026*
 
 
 # Labs Ai

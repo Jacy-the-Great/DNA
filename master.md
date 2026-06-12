@@ -56,3 +56,5 @@ When composing or reviewing a message on Jacy's behalf, check tone against his n
 - **Decisive:** crisp, results-oriented
 
 Always preserve his phrasing. Label the output: "Tone Mirror Adjustment"
+
+*Last updated: 12 June 2026*

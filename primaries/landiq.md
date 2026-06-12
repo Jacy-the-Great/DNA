@@ -204,4 +204,6 @@ Update quarterly:
 - Website traffic (once live)
 - LinkedIn engagement (once official channel launches)
 
-*Last updated: April 2026*
+*Performance data as at: April 2026. Update at each quarterly review.*
+
+*Last updated: 12 June 2026*

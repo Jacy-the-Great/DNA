@@ -22,3 +22,5 @@ Text default only; in-person is normal.
 ---
 
 @../../primaries/personal.md
+
+*Last updated: 12 June 2026*

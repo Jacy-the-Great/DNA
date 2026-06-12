@@ -1,0 +1,95 @@
+name: DNA Review Audit
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'   # First of each month at 9am UTC
+  workflow_dispatch:       # Allow manual trigger from GitHub UI
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run audit
+        id: audit
+        run: node scripts/audit.js
+        continue-on-error: true
+
+      - name: Open issue if review is overdue
+        if: steps.audit.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'DNA review overdue';
+
+            // Don't open a duplicate if one is already open
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+            if (open.some(i => i.title === title)) {
+              console.log('Issue already open — skipping.');
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body: [
+                '## DNA context is overdue for review',
+                '',
+                'The monthly audit flagged that the Thrive priorities review date in `master.md` has passed.',
+                '',
+                '**What to do:**',
+                '1. Open a Claude Code session in the `Jacy-the-Great/DNA` repo',
+                '2. Update `master.md`: revise the 6 Thrive priorities and bump the review date forward 90 days',
+                '3. Update `primaries/landiq.md`: refresh the performance data (revenue, users, deals)',
+                '4. Run `node scripts/compile.js` to rebuild all outputs',
+                '5. Run `node scripts/audit.js` to confirm clean',
+                '6. Commit, push, and re-paste the updated compiled files into your Claude Projects',
+                '7. Close this issue',
+                '',
+                'Full audit output is in the workflow run logs.',
+              ].join('\n'),
+            });
+            console.log('Issue created.');
+
+      - name: Close stale overdue issue if audit now passes
+        if: steps.audit.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'DNA review overdue';
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+            const existing = open.find(i => i.title === title);
+            if (!existing) return;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: existing.number,
+              body: 'Audit now passes. Closing automatically.',
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: existing.number,
+              state: 'closed',
+            });
+            console.log('Issue closed.');

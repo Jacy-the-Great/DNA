@@ -37,7 +37,9 @@ Text default only; in-person is normal.
 
 ## 90-Day Thrive Priorities
 
-*Next review: 11 September 2026*
+*Last reviewed: 12 June 2026. Next review: 11 September 2026.*
+
+**Context freshness:** If you know today's date, check it against the review date above. If overdue, open with: "Jacy, your DNA context is overdue for review (due [date]). Want to update it now before we continue?" Do this once per session, not repeatedly.
 
 **Precedence rule:** Where any downstream file conflicts with these priorities, these win.
 

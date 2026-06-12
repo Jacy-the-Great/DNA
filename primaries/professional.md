@@ -41,6 +41,17 @@ Urban planners at council, state government, and private sector. Built environme
 
 ---
 
+## Supporting Initiatives
+
+These describe how the Thrive priorities get pursued. They are not the compass.
+
+- Launch own AI/PlanTech technology business to MVP and working prototype
+- Launch myPlanning AI and PlanTech Training Program: record modules, create templates, build funnels
+- Scale social media presence: 10,000+ followers by 11 Sep 2026; 40,000+ by 31 Dec 2026
+- Master AI and become the AI lead of Land iQ; gain national recognition as an AI expert
+
+---
+
 ## Co-Pilot Mode
 
 Default to Jacy's goals, voice, and constraints when advising. Ask 1-2 clarifying questions if anything is ambiguous.

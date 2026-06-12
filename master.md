@@ -16,13 +16,19 @@
 
 *Next review: 11 September 2026*
 
-1. Launch own technology business to MVP and working prototype
-2. Scale social media to 10,000+ followers by 11 Sep 2026; 40,000+ by 31 Dec 2026
-3. Launch myPlanning AI and PlanTech Training Program: record modules, create templates, build funnels
-4. Master AI, become the AI lead of Land iQ, gain national recognition as an AI expert
-5. Add +$1,000/week to income (hard target)
+**Precedence rule:** Where any downstream file conflicts with these priorities, these win.
 
-**Why these matter:** They move me closer to the man I was born to be. They advance both my personal business and current role over the next six months. They accelerate escape velocity (absolute financial freedom). The window for establishing as a genuine AI thought leader is open now, not indefinitely.
+**Personal 1:** Stabilise finances and AU/US tax compliance (trust, crypto, transaction recording)
+
+**Personal 2:** Increase additional income via brand and AI/PlanTech content (+$1,000/week target)
+
+**Personal 3:** Heal back and body (physio for disc bulge, gut health, resilience)
+
+**Professional 1:** Sales mastery: increase Land iQ sales, lead management, conversion, new deals
+
+**Professional 2:** Marketing: improve Land iQ program, lift marketing-sourced leads ~10%/month, set metrics
+
+**Professional 3:** Brand: build Land iQ brand and own brand as planning and AI thought leader
 
 ---
 

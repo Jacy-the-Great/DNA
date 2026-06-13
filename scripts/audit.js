@@ -234,6 +234,49 @@ if (fs.existsSync(reAbs)) {
   check('Imports master.md directly',   c.includes('@../../master.md'));
 }
 
+// ── 11. Manifest sync status ──────────────────────────────────────────────────
+console.log('\n[11] Manifest sync status');
+const manifestPath = path.join(ROOT, 'manifest.json');
+if (!fs.existsSync(manifestPath)) {
+  fail('manifest.json not found');
+} else {
+  let manifest;
+  try {
+    manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  } catch (e) {
+    fail(`manifest.json parse error: ${e.message}`);
+    manifest = null;
+  }
+  if (manifest) {
+    for (const entry of manifest.files) {
+      const { source, attached_to, last_synced } = entry;
+      const projects = (attached_to || []).join(', ');
+
+      if (!source.startsWith('DNA/')) {
+        warn(`${source}: source file not in this repo, check manually`);
+        continue;
+      }
+
+      const relPath = source.slice('DNA/'.length);
+      const absPath = path.join(ROOT, relPath);
+
+      if (!fs.existsSync(absPath)) {
+        fail(`${source}: file not found`);
+        continue;
+      }
+
+      const fileMtime   = new Date(fs.statSync(absPath).mtimeMs);
+      const fileDateStr = fileMtime.toISOString().slice(0, 10);
+
+      if (fileDateStr > last_synced) {
+        fail(`${source}: changed since last synced to [${projects}] — re-attach and update last_synced`);
+      } else {
+        ok(source);
+      }
+    }
+  }
+}
+
 // ── Summary ───────────────────────────────────────────────────────────────────
 console.log(`\n${'─'.repeat(50)}`);
 console.log(`  ${passed} passed, ${failed} failed`);

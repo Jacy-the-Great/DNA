@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "source": "DNA/outputs/professional.compiled.md",
+      "type": "DNA",
+      "attached_to": ["Professional Clone", "AI Studio", "AI Playbook Engine", "RPM and Planning"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "DNA/outputs/personal.compiled.md",
+      "type": "DNA",
+      "attached_to": ["Personal", "Malibu", "Travel Agent", "RPM and Planning"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "DNA/outputs/landiq.compiled.md",
+      "type": "DNA",
+      "attached_to": ["Land iQ", "RPM and Planning"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "DNA/outputs/brand-manager.compiled.md",
+      "type": "DNA",
+      "attached_to": ["Professional Brand Manager"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "DNA/outputs/martini.compiled.md",
+      "type": "DNA",
+      "attached_to": ["Martini"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "DNA/outputs/real-estate.compiled.md",
+      "type": "DNA",
+      "attached_to": ["Real Estate"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "RPM-and-Operations/rpm/life-vision.md",
+      "type": "RPM",
+      "attached_to": ["RPM and Planning"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "RPM-and-Operations/domains/real-estate/brassall-summary.md",
+      "type": "domain-doc",
+      "attached_to": ["Real Estate"],
+      "last_synced": "2026-06-13"
+    },
+    {
+      "source": "RPM-and-Operations/domains/real-estate/property-investing-plan.md",
+      "type": "domain-doc",
+      "attached_to": ["Real Estate"],
+      "last_synced": "2026-06-13"
+    }
+  ]
+}

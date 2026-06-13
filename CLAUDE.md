@@ -100,6 +100,9 @@ node scripts/new-sub.js landiq training-modules
 - After any edit, recompile the affected file and run the audit.
 - Quarterly review: update the Thrive priorities in master.md and the performance data in landiq.md.
 - Next scheduled review: 11 September 2026.
+- After running audit.js, review the manifest sync flags. For any flagged file,
+  manually re-attach it to the listed Claude Projects, then update last_synced
+  in manifest.json to today's date.
 
 ---
 

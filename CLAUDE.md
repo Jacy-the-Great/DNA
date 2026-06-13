@@ -65,6 +65,8 @@ CHANGELOG.md            Version history
 
 If a piece of content is ambiguous about which layer it belongs to, ask rather than guess. Layer placement is the whole point of the design.
 
+When writing content that involves Jacy's decisions, preferences, or conclusions: preserve the actual certainty level from the source material. Do not upgrade "considering," "leaning toward," or "unlikely to" into "decided" or "will." If source material is ambiguous about whether something is decided, ask rather than assume.
+
 ---
 
 ## Scripts

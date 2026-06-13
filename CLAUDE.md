@@ -67,6 +67,8 @@ If a piece of content is ambiguous about which layer it belongs to, ask rather t
 
 When writing content that involves Jacy's decisions, preferences, or conclusions: preserve the actual certainty level from the source material. Do not upgrade "considering," "leaning toward," or "unlikely to" into "decided" or "will." If source material is ambiguous about whether something is decided, ask rather than assume.
 
+Do not record government identifiers (ABN, ACN, TFN, SSN, ITIN, passport numbers), financial account numbers (bank accounts, BSB, credit cards), or passwords and credentials in any file in this system. If source material contains such values, omit them and flag the omission to Jacy. Placeholder references to a role ("confirm ABN with accountant") are fine; the actual value is not. If a sensitive identifier is already present in a file, flag it immediately for removal.
+
 ---
 
 ## Scripts
